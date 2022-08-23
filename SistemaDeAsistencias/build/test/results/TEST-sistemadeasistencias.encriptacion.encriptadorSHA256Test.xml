@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="lenovo" name="sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest" skipped="0" tests="4" time="1.001" timestamp="2022-08-23T02:59:12">
+<testsuite errors="0" failures="0" hostname="lenovo" name="sistemadeasistencias.encriptacion.encriptadorSHA256Test" skipped="0" tests="2" time="0.573" timestamp="2022-08-23T04:19:38">
   <properties>
     <property name="libs.spring-framework300.classpath" value="/usr/lib/netbeans/platform/modules/org-apache-commons-logging.jar:/usr/lib/netbeans/java/modules/ext/cglib-2.2.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-aop-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-beans-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-context-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-core-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-expression-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-jms-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-orm-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-struts-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-test-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-tx-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-web-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.18.RELEASE.jar:/usr/lib/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value="/home/josephy/Descargas/mysql-connector-java-8.0.20.jar:/usr/lib/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/usr/lib/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
@@ -20,7 +20,7 @@
     <property name="libs.eclipselink.javadoc" value="/usr/lib/netbeans/java/modules/ext/docs/jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="/usr/lib/jvm/liberica-jdk-11-full/lib" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/test/results/TEST-sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest.xml crashfile=/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/junitvmwatcher5766547538221574405.properties propsfile=/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/junit1458252743465215337.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner sistemadeasistencias.encriptacion.encriptadorSHA256Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/test/results/TEST-sistemadeasistencias.encriptacion.encriptadorSHA256Test.xml crashfile=/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/junitvmwatcher8626994631007421809.properties propsfile=/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/junit10976564541947258351.properties" />
     <property name="jdk.debug" value="release" />
     <property name="javafx.enable.concurrent.external.runs" value="false" />
     <property name="libs.spring-framework300.src" value="" />
@@ -66,7 +66,7 @@
     <property name="compile.on.save" value="true" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="test.includes" value="sistemadeasistencias/accesoBaseDeDatos/conexionBaseDeDatosTest.java" />
+    <property name="test.includes" value="sistemadeasistencias/encriptacion/encriptadorSHA256Test.java" />
     <property name="run.classpath" value="dist/SistemaDeAsistencias.jar:/home/josephy/Descargas/mysql-connector-java-8.0.20.jar:/usr/lib/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/usr/lib/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
     <property name="libs.jaxb.src" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
@@ -221,7 +221,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="/usr/lib/netbeans/extide/ant/lib/ant.jar:/usr/lib/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/usr/lib/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/usr/lib/netbeans/enterprise/modules/ext/jstl-impl.jar:/usr/lib/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
     <property name="libs.jsp-compilation.classpath" value="/usr/lib/netbeans/extide/ant/lib/ant.jar:/usr/lib/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/usr/lib/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/usr/lib/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/usr/lib/netbeans/enterprise/modules/ext/jstl-api.jar:/usr/lib/netbeans/extide/ant/lib/ant-launcher.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="/usr/lib/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
-    <property name="javac.includesfile.binary" value="/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/null2085648353" />
+    <property name="javac.includesfile.binary" value="/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/null435179706" />
     <property name="libs.javaee-api-7.0.classpath" value="/usr/lib/netbeans/enterprise/modules/ext/javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="" />
     <property name="libs.restapi.maven-pom" value="" />
@@ -351,7 +351,7 @@
     <property name="empty.dir" value="/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/empty" />
     <property name="javafx.deploy.installpermanently" value="false" />
     <property name="netbeans.user" value="/home/josephy/.netbeans/14" />
-    <property name="javac.includes.binary" value="/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/test/classes/sistemadeasistencias/accesoBaseDeDatos/conexionBaseDeDatosTest.class" />
+    <property name="javac.includes.binary" value="/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/test/classes/sistemadeasistencias/encriptacion/encriptadorSHA256Test.class" />
     <property name="file.separator" value="/" />
     <property name="line.separator" value="&#xa;" />
     <property name="javadoc.additionalparam" value="" />
@@ -391,7 +391,7 @@
     <property name="javafx.binarycss" value="false" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="user.properties.file" value="/home/josephy/.netbeans/14/build.properties" />
-    <property name="javac.includes" value="sistemadeasistencias/accesoBaseDeDatos/conexionBaseDeDatosTest.java" />
+    <property name="javac.includes" value="sistemadeasistencias/encriptacion/encriptadorSHA256Test.java" />
     <property name="netbeans.autoupdate.country" value="MX" />
     <property name="java.class.path" value="/home/josephy/Descargas/mysql-connector-java-8.0.20.jar:/usr/lib/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/usr/lib/netbeans/platform/modules/ext/junit-4.13.2.jar:/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/classes:/home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/build/test/classes:/usr/lib/netbeans/extide/ant/lib/ant-launcher.jar:/usr/lib/netbeans/extide/ant/lib/ant.jar:/usr/lib/netbeans/extide/ant/lib/ant-junit.jar:/usr/lib/netbeans/extide/ant/lib/ant-junit4.jar" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -450,7 +450,7 @@
     <property name="libs.metro.javadoc" value="/usr/lib/netbeans/enterprise/docs/webservices-api-javadoc.jar:/usr/lib/netbeans/enterprise/docs/webservices-extra-javadoc.jar:/usr/lib/netbeans/enterprise/docs/webservices-extra-api-javadoc.jar:/usr/lib/netbeans/enterprise/docs/webservices-rt-javadoc.jar:/usr/lib/netbeans/enterprise/docs/webservices-tools-javadoc.jar" />
     <property name="libs.jakartaee-web-api-9.0.src" value="" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
-    <property name="test.class" value="sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest" />
+    <property name="test.class" value="sistemadeasistencias.encriptacion.encriptadorSHA256Test" />
     <property name="libs.javaee-web-api-7.0.src" value="" />
     <property name="junit.forkmode" value="perTest" />
     <property name="libs.jsp-compiler.classpath" value="/usr/lib/netbeans/enterprise/ant/extra/jspcompile.jar" />
@@ -458,17 +458,10 @@
     <property name="libs.jakartaee-api-8.0.src" value="" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="/usr/lib/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/usr/lib/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/usr/lib/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest" name="testNoEstaConectado" time="0.002" />
-  <testcase classname="sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest" name="testDesconectar" time="0.001" />
-  <testcase classname="sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest" name="testGetConexion" time="0.213" />
-  <testcase classname="sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatosTest" name="testEstaConectado" time="0.003" />
-  <system-out><![CDATA[esta actualmente desconectado
-desconectar
-false
-test conexion exitosa
-esta actualmente conectado
+  <testcase classname="sistemadeasistencias.encriptacion.encriptadorSHA256Test" name="testEncriptarCadena" time="0.037" />
+  <testcase classname="sistemadeasistencias.encriptacion.encriptadorSHA256Test" name="testEncriptarCadenaTrivial" time="0.002" />
+  <system-out><![CDATA[encriptar Cadena correctamente
+encriptar Cadena trivial correctamente
 ]]></system-out>
-  <system-err><![CDATA[File directorio is /home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/src/sistemadeasistencias/accesoBaseDeDatos/configuracionAcceso.txt
-File directorio is /home/josephy/Escritorio/SistemaDeAsistencias/SistemaDeAsistencias/src/sistemadeasistencias/accesoBaseDeDatos/configuracionAcceso.txt
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

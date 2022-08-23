@@ -1,17 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
+
 package sistemadeasistencias.accesoBaseDeDatos;
 
 import java.sql.Connection;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.apiguardian.api;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -22,60 +18,58 @@ public class conexionBaseDeDatosTest {
     public conexionBaseDeDatosTest() {
     }
     
-    @BeforeAll
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterAll
+    @AfterClass
     public static void tearDownClass() {
     }
     
-    @BeforeEach
+    @Before
     public void setUp() {
     }
-    
-    @AfterEach
-    public void tearDown() {
-    }
+  
 
-    /**
-     * Test of getConexion method, of class conexionBaseDeDatos.
-     */
     @Test
     public void testGetConexion() throws Exception {
-        System.out.println("getConexion");
+        System.out.println("test conexion exitosa");
         conexionBaseDeDatos instance = new conexionBaseDeDatos();
         Connection expResult = null;
+        instance.conectar();
         Connection result = instance.getConexion();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
      * Test of conectar method, of class conexionBaseDeDatos.
      */
-    @Test
-    public void testConectar() throws Exception {
-        System.out.println("conectar");
-        conexionBaseDeDatos instance = new conexionBaseDeDatos();
-        instance.conectar();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
     /**
      * Test of estaConectado method, of class conexionBaseDeDatos.
      */
     @Test
     public void testEstaConectado() throws Exception {
-        System.out.println("estaConectado");
+        System.out.println("esta actualmente conectado");
+        conexionBaseDeDatos instance = new conexionBaseDeDatos();
+        boolean expResult = true;
+        instance.conectar();
+        boolean result = instance.estaConectado();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+
+    }
+
+    @Test
+    public void testNoEstaConectado() throws Exception {
+        System.out.println("esta actualmente desconectado");
         conexionBaseDeDatos instance = new conexionBaseDeDatos();
         boolean expResult = false;
         boolean result = instance.estaConectado();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -86,8 +80,12 @@ public class conexionBaseDeDatosTest {
         System.out.println("desconectar");
         conexionBaseDeDatos instance = new conexionBaseDeDatos();
         instance.desconectar();
+        Connection estatusEsperado = null;
+        Connection estatusObtenido = instance.getConexion();
+        String conectado = instance.estaConectado()?"True":"false";
+        System.out.println(conectado);
+        assertEquals(estatusEsperado, estatusObtenido);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
-    
 }

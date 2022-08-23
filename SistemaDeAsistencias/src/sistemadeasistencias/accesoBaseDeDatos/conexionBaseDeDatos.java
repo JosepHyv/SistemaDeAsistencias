@@ -25,7 +25,6 @@ public class conexionBaseDeDatos {
     private Connection conexion;
 
     public Connection getConexion() throws SQLException {
-        conectar();
         return conexion;
     }
 
@@ -36,7 +35,6 @@ public class conexionBaseDeDatos {
             Path CURRENT_FILE = Paths.get("");
             String directorio = CURRENT_FILE.toAbsolutePath().toString();
             directorio = Paths.get(directorio, "src", "sistemadeasistencias", "accesoBaseDeDatos", "configuracionAcceso.txt").toString();
-            System.err.println("File directorio is " + directorio); // err for debbug
             URL url = new File(directorio).toURI().toURL();
             FileInputStream archivoConfiguracion = new FileInputStream(new File(url.getPath()));
             Properties atributos = new Properties();
@@ -61,10 +59,9 @@ public class conexionBaseDeDatos {
     }
 
     public void desconectar() throws SQLException {
-        if (conexion != null) {
-            if (!conexion.isClosed()) {
-                conexion.close();
-            }
+        if (conexion != null)
+            if(!this.conexion.isClosed()) {
+            this.conexion.close();
         }
     }
     
