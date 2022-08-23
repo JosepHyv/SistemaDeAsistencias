@@ -45,10 +45,27 @@ public class Roles {
         this.nombreRol = nombreRol;
     }
     
+    @Override
     public String toString() {
        return "Roles{ \n" +
                "idRol: "+ this.idRol + "\n" +
                "nombreRol: "+ this.nombreRol + "\n" +
                "}\n";
     }
+    
+    @Override
+    public boolean equals(Object objeto) {
+        boolean iguales = false;
+        if(objeto == this){
+            iguales = true;
+        }
+        if(objeto != null && objeto instanceof Roles){
+            Roles secundario = (Roles) objeto;
+            iguales = this.idRol == secundario.idRol && 
+                    this.nombreRol != null && secundario.nombreRol != null &&
+                    this.nombreRol.equals(secundario.nombreRol);
+        }
+        return iguales;
+    }
+    
 }
