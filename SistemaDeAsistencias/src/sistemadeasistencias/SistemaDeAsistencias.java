@@ -4,6 +4,14 @@
  */
 package sistemadeasistencias;
 
+import sistemadeasistencias.accesoBaseDeDatos.conexionBaseDeDatos;
+import sistemadeasistencias.modelos.UsuarioDAO;
+import sistemadeasistencias.modelos.AcademicoDAO;
+import sistemadeasistencias.modelos.EstudianteDAO;
+import sistemadeasistencias.pojos.Academico;
+import sistemadeasistencias.pojos.Estudiante;
+import sistemadeasistencias.pojos.Usuario;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,7 +26,7 @@ public class SistemaDeAsistencias extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("vistas/FXMLInicioSesion.fxml"));
         
         Scene scene = new Scene(root);
         

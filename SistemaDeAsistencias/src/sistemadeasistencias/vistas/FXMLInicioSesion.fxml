@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#clicIniciarSesion" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemadeasistencias.vistas.FXMLInicioSesionController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="454.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../recursos/control-de-asistencia-fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="614.0" layoutY="114.0" prefHeight="92.0" prefWidth="231.0" text="Inicio De Sesion" textFill="#2e75bc">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="66.0" prefHeight="48.0" prefWidth="382.0" text="Control De Asistencias" textFill="#d00c0c">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="523.0" layoutY="241.0" text="Correo Institucional">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCorreo" layoutX="523.0" layoutY="262.0" prefHeight="26.0" prefWidth="382.0" />
+      <Label fx:id="lbCorreo" layoutX="523.0" layoutY="294.0" prefHeight="18.0" prefWidth="220.0" textFill="RED" />
+      <Label layoutX="523.0" layoutY="338.0" prefHeight="18.0" prefWidth="158.0" text="Contraseña">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tfClave" layoutX="521.0" layoutY="359.0" prefHeight="26.0" prefWidth="382.0" />
+      <Label fx:id="lbClave" layoutX="523.0" layoutY="392.0" prefHeight="18.0" prefWidth="220.0" textFill="RED" />
+      <Button layoutX="642.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#clicIniciarSesion" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #4CAF50;" text="Iniciar Sesion" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
