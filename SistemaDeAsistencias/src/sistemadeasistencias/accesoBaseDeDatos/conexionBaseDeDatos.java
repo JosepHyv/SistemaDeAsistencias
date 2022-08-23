@@ -23,28 +23,30 @@ import java.util.logging.Logger;
 
 public class conexionBaseDeDatos {
     private Connection conexion;
+    private String direccionBD;
+    private String usuario;
+    private String contrasenia;
 
     public Connection getConexion() throws SQLException {
         return conexion;
     }
-
-    public void conectar() throws SQLException {
-        try {
-            // usando directorios  generales for win ||  unix like systems
-
+    
+    public void cargarConfiguracion(){
+        FileInputStream archivoConfiguracion = null;
+        try{
             Path CURRENT_FILE = Paths.get("");
             String directorio = CURRENT_FILE.toAbsolutePath().toString();
             directorio = Paths.get(directorio, "src", "sistemadeasistencias", "accesoBaseDeDatos", "configuracionAcceso.txt").toString();
             URL url = new File(directorio).toURI().toURL();
-            FileInputStream archivoConfiguracion = new FileInputStream(new File(url.getPath()));
+            archivoConfiguracion = new FileInputStream(new File(url.getPath()));
             Properties atributos = new Properties();
             atributos.load(archivoConfiguracion);
             archivoConfiguracion.close();
             Class.forName("java.sql.Driver");
-            String direccionBD = atributos.getProperty("DireccionBD");
-            String usuario = atributos.getProperty("Usuario");
-            String contrasenia = atributos.getProperty("Contrasenia");
-            conexion = DriverManager.getConnection(direccionBD, usuario, contrasenia);
+            this.direccionBD = atributos.getProperty("DireccionBD");
+            this.usuario = atributos.getProperty("Usuario");
+            this.contrasenia = atributos.getProperty("Contrasenia");
+            
         } catch (FileNotFoundException fnfException) {
             Logger.getLogger(conexionBaseDeDatos.class.getName()).log(Level.SEVERE, null, fnfException);
         } catch (IOException ioException) {
@@ -52,6 +54,12 @@ public class conexionBaseDeDatos {
         } catch (ClassNotFoundException cnfException) {
             Logger.getLogger(conexionBaseDeDatos.class.getName()).log(Level.SEVERE, null, cnfException);
         }
+    }
+    
+    public void conectar() throws SQLException {        
+        this.cargarConfiguracion();
+        this.conexion = DriverManager.getConnection(this.direccionBD, this.usuario, this.contrasenia);
+    
     }
     
     public boolean estaConectado() throws SQLException{

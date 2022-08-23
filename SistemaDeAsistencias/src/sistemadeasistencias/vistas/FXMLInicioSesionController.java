@@ -103,10 +103,10 @@ public class FXMLInicioSesionController implements Initializable {
         
         Stage escenarioPrincipal = (Stage) tfCorreo.getScene().getWindow();
         try {
-            URL url = new File("FXMLPantallaPrincipal.fxml").toURI().toURL();
+            URL url = new File("src/sistemadeasistencias/vistas/FXMLPantallaPrincipal.fxml").toURI().toURL();
             Scene pantallaPrincipal = new Scene(FXMLLoader.load(url));
             escenarioPrincipal.setScene(pantallaPrincipal);
-            escenarioPrincipal.setTitle("Sistema De Asistencias");
+            escenarioPrincipal.setTitle("Bienvenido | Menu Principal");
             escenarioPrincipal.show();
         } catch (IOException ioException) {
             Utilidades.mensajeErrorAlCargarLaInformacionDeLaVentana();
