@@ -13,6 +13,12 @@ public class ExperienciaEducativa {
     private String nombreExperiencia;
     private String escuela;
 
+    public ExperienciaEducativa(){
+        this.nrc = -1;
+        this.nombreExperiencia = null;
+        this.escuela = null;
+    }
+    
     /**
      * @return the nrc
      */
@@ -55,5 +61,12 @@ public class ExperienciaEducativa {
         this.escuela = escuela;
     }
     
-    
+    @Override
+    public String toString() {
+       return "ExperienciaEducativa{ \n" +
+               "nrc: "+ this.nrc + "\n" +
+               "nombreExperiencia: "+ this.nombreExperiencia + "\n" +
+               "escuela: "+ this.escuela + "\n" +
+               "}\n";
+    }
 }

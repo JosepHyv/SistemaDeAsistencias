@@ -61,5 +61,12 @@ public class Estudiante {
         this.matricula = matricula;
     }
     
-    
+    @Override
+    public String toString() {
+       return "Usuario{ \n" +
+               "idEstudiante: "+ this.idEstudiante + "\n" +
+               "idUsuario: "+ this.idUsuario + "\n" +
+               "matricula: "+ this.matricula  +"\n" +
+               "}\n";
+    }
 }
