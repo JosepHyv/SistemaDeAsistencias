@@ -80,19 +80,21 @@ public class FXMLInicioSesionController implements Initializable {
             encriptadorSHA256 encriptado = new encriptadorSHA256();
             UsuarioDAO usuarioActual = new UsuarioDAO();
             Usuario usuarioObtenido = usuarioActual.obtenerUsuarioPorCorreoYClave(correoInstitucional, claveIngreso);
-            
+            System.out.println("la validacion " + isValid + "usuario: " + usuarioObtenido);
+                
             String correoObtenido = usuarioObtenido.getCorreoInstitucional();
             String contraseniaObtanida = usuarioObtenido.getClaveIngreso();
             String claveEncriptada = encriptado.encriptarCadena(claveIngreso);
-            isValid = (correoObtenido.equals(correoInstitucional)) && (contraseniaObtanida.equals(claveEncriptada));
-
+            if(correoObtenido == null || contraseniaObtanida == null)
+                isValid = false;
+            else
+                isValid = (correoObtenido.equals(correoInstitucional)) && (contraseniaObtanida.equals(claveEncriptada));
             if (isValid) {
                 Utilidades.mostrarAlertaSinConfirmacion("Aviso", "Bienvenido(a).", Alert.AlertType.INFORMATION);
              //   InformacionSesion.getInformacionSesion().setNombreRol(usuarioObtenido.getGlobalNombreRol());
                 irPantallaPrincipal();
             } else {
-                Utilidades.mostrarAlertaSinConfirmacion("Error",
-                        "El correo inistitucional y/o contraseña son incorrectos", Alert.AlertType.WARNING);
+                Utilidades.mostrarAlertaSinConfirmacion("Error","El correo inistitucional y/o contraseña son incorrectos", Alert.AlertType.WARNING);
             }
         } catch (SQLException ex) {
             Logger.getLogger(FXMLInicioSesionController.class.getName()).log(Level.SEVERE, null, ex);
