@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="sistemadeasistencias.vistas.FXMLPantallaPrincipalController">
+   <children>
+      <Label layoutX="97.0" layoutY="45.0" prefHeight="87.0" prefWidth="245.0" text="Bienvenido">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnMisExperiencias" layoutX="343.0" layoutY="191.0" mnemonicParsing="false" style="-fx-background-color: #1E88B7;" text="Mis Experiencias Educativas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistroAsistencia" layoutX="378.0" layoutY="344.0" mnemonicParsing="false" style="-fx-background-color: #5162AE;" text="Registrar Asistencia" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExperiencias" layoutX="283.0" layoutY="263.0" mnemonicParsing="false" style="-fx-background-color: #046466;" text="Mostrar Todas las Experiencias Educativas " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporteAsistencia" layoutX="365.0" layoutY="429.0" mnemonicParsing="false" style="-fx-background-color: #806AA8;" text="Reporte De Asistencias" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCerrarSesion" layoutX="771.0" layoutY="573.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Cerrar Sesion" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

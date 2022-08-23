@@ -26,7 +26,8 @@ public class UsuarioDAO {
             PreparedStatement sentencia = conexion.prepareStatement(consulta);
             encriptadorSHA256 encriptador = new encriptadorSHA256();
             sentencia.setString(1,correo);
-            sentencia.setString(2, encriptador.encriptarCadena(claveIngreso));
+            String claveEncriptada = encriptador.encriptarCadena(claveIngreso);
+            sentencia.setString(2, claveEncriptada);
             ResultSet resultado = sentencia.executeQuery();
             if(resultado.next()){
                 usuarioEncontrado.setIdUsuario(String.valueOf(resultado.getInt("idUsuario")));
@@ -34,6 +35,7 @@ public class UsuarioDAO {
                 usuarioEncontrado.setApellidoPaterno(resultado.getString("apellidoPaterno"));
                 usuarioEncontrado.setApellidoMaterno(resultado.getString("apellidoMaterno"));
                 usuarioEncontrado.setCorreoInstitucional(resultado.getString("correoInstitucional"));
+                usuarioEncontrado.setClaveIngreso(claveEncriptada);
                 usuarioEncontrado.setIdRol(String.valueOf(resultado.getInt("idRol")));
             }
         } finally{
