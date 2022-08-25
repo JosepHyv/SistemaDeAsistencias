@@ -11,7 +11,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import sistemadeasistencias.pojos.Roles;
-
+import java.sql.SQLException;
 /**
  *
  * @author josephy
@@ -41,7 +41,7 @@ public class RolesDAOTest {
      * Test of obtenerRolPorId method, of class RolesDAO.
      */
     @Test
-    public void testObtenerRolPorIdProfesor() throws Exception {
+    public void testObtenerRolPorIdProfesor() throws SQLException {
         System.out.println("obtenerRolPorId Profesor");
         int idRol = 1;
         RolesDAO instance = new RolesDAO();
@@ -55,7 +55,7 @@ public class RolesDAOTest {
     }
     
     @Test
-    public void testObtenerRolPorIdEstudiante() throws Exception {
+    public void testObtenerRolPorIdEstudiante() throws SQLException {
         System.out.println("obtenerRolPorId Estudiante");
         int idRol = 2;
         RolesDAO instance = new RolesDAO();
@@ -69,7 +69,7 @@ public class RolesDAOTest {
     }
     
     @Test
-    public void testObtenerRolPorIdInexistente() throws Exception {
+    public void testObtenerRolPorIdInexistente() throws SQLException {
         System.out.println("obtenerRolPorId Inexistente");
         int idRol = 3;
         RolesDAO instance = new RolesDAO();

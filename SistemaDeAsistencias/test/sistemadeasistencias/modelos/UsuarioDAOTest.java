@@ -11,6 +11,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import sistemadeasistencias.pojos.Usuario;
+import java.sql.SQLException;
 
 /**
  *
@@ -41,7 +42,7 @@ public class UsuarioDAOTest {
      * Test of obtenerUsuarioPorCorreoYClave method, of class UsuarioDAO.
      */
     @Test
-    public void testObtenerUsuarioPorCorreoYClave() throws Exception {
+    public void testObtenerUsuarioPorCorreoYClave() throws SQLException {
         System.out.println("obtenerUsuarioPorCorreoYClave");
         String correo = "spiderman@uv.mx";
         String claveIngreso = "password";
@@ -53,6 +54,7 @@ public class UsuarioDAOTest {
         expResult.setApellidoMaterno("Parker");
         expResult.setCorreoInstitucional(correo);
         expResult.setIdRol("1");
+        expResult.setClaveIngreso("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
         Usuario result = instance.obtenerUsuarioPorCorreoYClave(correo, claveIngreso);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
